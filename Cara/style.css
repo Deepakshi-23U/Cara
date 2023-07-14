@@ -1,0 +1,500 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body
+{
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+}
+
+/* this is the menu bar code -> SECTION-1*/
+nav
+{
+    display:flex;
+    justify-content: space-between;
+    background-color: #679186;
+    backdrop-filter: blur(8px);
+    position:sticky;
+    z-index:1000;
+    top:0;
+    box-shadow: 0 3px 6px rgb(16, 15, 15);
+}
+
+#logo 
+{
+    padding:20px;
+}
+nav ul, #mobile
+{
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+}
+
+nav ul li
+{
+    padding-left:50px;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a, #mobile li a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+nav ul li a:hover, nav ul li a.active{
+    color: #FCD8D4;
+}
+
+nav ul li a:after{
+    content:"";
+    width:0;
+    height:3px;
+    background-color: #FCD8D4;
+    position:absolute;
+    top:40px;
+    left:40px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after
+{
+    width:70%;
+}
+
+#mobile
+{
+    display:none;
+}
+
+/*menu bar ends here*/
+
+/*first page*/
+h4
+{
+    font-size:40px;
+}
+
+h2
+{
+    font-size:60px;
+}
+
+p{
+    font-size:30px;
+}
+
+#coverpg{
+    background-color: #C3DBD9;
+    background-image: url("Images/back.avif");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    height: 90vh;
+    width: 100%;
+    margin-bottom: 50px;
+    padding:30px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+.pic{
+    height:600px;
+    width:50%;
+    background-image:url("images/bg3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom:80px;
+    z-index:20;
+    margin-left:50px;
+}
+
+.content{
+    background-color:rgb(13, 13, 44);
+    color: white;
+    height:500px;
+    width:50%;
+    position:relative;
+    top:7%;
+    right:25%;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+
+.content div{
+    text-align:center;
+    position:relative;
+    bottom:20px;
+    padding:20px;
+}
+#coverpg button{
+    background-image: url("images/blush.jpeg");
+    color:black;
+    padding: 10px 30px 10px 30px;
+    background-color: transparent;
+    border:0;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor:pointer;
+}
+
+/*first page ends here*/
+
+/*feature section starts here*/
+
+.container
+{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div{
+    height:180px;
+    text-align: center;
+    box-shadow: 3px 3px 2px rgba(42, 23, 23, 0.34);
+}
+
+.container div:hover{
+    box-shadow: 5px 3px 5px rgba(42, 23, 23, 0.34);
+}
+
+.container div h5{
+    font-size:25px;
+    position:relative;
+    top:20px;
+    text-align:center;
+    background-color: #FCD8D4;
+}
+.container div:nth-child(1) h5
+{
+    background-color: #BEEBE9;
+}
+.container div:nth-child(2) h5
+{
+    background-color:pink;
+}
+.container div:nth-child(3) h5
+{
+    background-color:#85f1b7;
+}
+.container div:nth-child(4) h5
+{
+    background-color: #6ecde0;
+}
+.container div:nth-child(5) h5
+{
+    background-color: #b1bde7;
+}
+
+#features p{
+    text-align:center;
+}
+.products
+{
+    display:grid;
+    grid-gap:3rem;
+    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat(5,auto);
+}
+
+.products div{
+    padding: 5px;
+    background-color: rgb(229, 229, 229);
+}
+
+.products .pro-des div,p,h5
+{
+    text-align:left;
+}
+.products .pro-img img
+{
+    max-width:100%;
+    border-radius:50px;
+    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.24);
+}
+.products .pro-des a{
+    position:relative;
+    left:90px;
+    bottom:20px;
+}
+.products .pro-des a:hover{
+    color:#679186;
+    cursor:pointer;
+}
+.pro-img img:hover{
+    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.24);
+}
+
+/*feature section ends here*/
+
+/*banner section starts here*/
+#banner
+{
+    background-image: url("Images/ban.jpeg");
+    background-size: cover;
+    height:300px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+#banner h4,h2{ 
+    font-size: 30px;
+    padding:10px;
+}
+#banner span{
+  color:red;
+  font-size:30px;
+}
+
+#banner button{
+    height:50px;
+    width:150px;
+}
+#banner button:hover{
+    background-color:#679186;
+    cursor:pointer;
+    color:white;
+}
+
+#sm-banner{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:10px;
+}
+#sm-banner .bb{
+    min-width:45%;
+    height:50vh;
+    background-image: url("Images/about/b17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:left;
+}
+
+#sm-banner #s{
+    background-image: url("Images/about/b18.jpg");
+}
+
+#sm-banner button{
+    height:40px;
+    width:100px;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor:pointer;
+}
+
+#sm-banner .bb:hover button{
+   background-color:#679186;
+   color:white;
+}
+
+/*banner section ends here*/
+
+/*mewsletter strts here*/
+
+#newsletter{
+    background-image: url("Images/about/b2.jpg");
+    color:white;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:center;
+    padding:20px;
+    height:30vh;
+    font-size:40px;
+}
+.box{
+    display:flex;
+    width:40%;
+}
+.box input{
+   height:50px;
+   width:100%;
+   border: 1px solid transparent;
+   outline:none;
+}
+
+.box button{
+    background-color:rgb(237, 184, 210);
+    height:50px;
+    width:30%;
+    border: 1px solid transparent;
+    cursor:pointer;
+}
+.box button:hover{
+    background-color:white;
+    color:rgb(237, 184, 210)
+}
+.nt span{
+    color:rgb(248, 210, 23);
+}
+/*newsletter ends here*/
+
+/*footer stars here*/
+footer{
+    background-image: url("Images/back.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.one{
+    display:flex;
+    justify-content:space-around;
+    padding:30px;
+}
+.one .col{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+.one .col a{
+    text-decoration:none;
+    color:grey;
+}
+.col span{
+    font-weight:bolder;
+}
+.col p{
+    display:inline;
+    font-size:20px;
+    color:grey;
+}
+.col .row img{
+    display:inline;
+}
+.copyright p{
+    font-size:20px;
+    color:grey;
+    text-align:center;
+}
+/*footer ends here*/
+
+/*media query*/
+
+@media (max-width:799px)
+{
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        width:100%;
+    }
+
+    #navbar{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:flex-end;
+        display:none;
+    }
+    #mobile{
+        display:flex;
+    }
+
+    #mobile li a:hover{
+        cursor: pointer;
+    }
+
+    #mobile li{
+        padding: 20px;
+        font-size:30px;
+    }
+
+    #bar{
+        position:relative;
+        top:28px;
+        font-size:30px;
+    }
+    
+    #navbar.act{
+        display:inline;
+    }
+   
+    .pic{
+        display:none;
+    }
+
+    .content{
+        width:70%;
+        position:relative;
+        left:3%;
+        border-radius: 20px;
+    }
+    
+    .content div{
+        width:100%;
+        height:100%;
+        position: relative;
+        top:100px;
+    }
+    #features .container{
+        display:grid;
+        grid-template-rows: repeat(2,auto);
+        grid-template-columns: repeat(3,auto);
+    }
+
+    #features .products{
+        grid-template-rows: repeat(5,auto);
+        grid-template-columns: repeat(2,auto);
+    }
+
+    #sm-banner{
+        flex-direction:column;
+    }
+    #sm-banner .bb{
+        min-width:110%;
+        padding-left:10%;
+    
+    }
+    
+    .foot{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+        max-width:100%;
+        flex-direction: column;
+
+    }
+
+    .one .col a{
+        text-decoration:none;
+        color:grey;
+        text-align: left;
+    }
+
+   .one .col h4{
+    font-size:25px;
+   }
+
+   .one .col p{
+     font-size:15px;
+   }
+
+
+}
